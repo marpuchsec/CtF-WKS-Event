@@ -1,0 +1,263 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html>
+<head th:replace="head :: head">
+<title>LOGO Homepage</title>
+		<link href="../static/css/style.css" th:href="@{css/style.css}" rel="stylesheet" type="text/css" media="all" />
+		<link href="../static/css/bootstrap.css" th:href="@{css/bootstrap.css}" rel="stylesheet" type="text/css" media="all" />
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css' />
+		<link href='http://fonts.googleapis.com/css?family=Carrois+Gothic' rel='stylesheet' type='text/css' />
+		<link href='http://fonts.googleapis.com/css?family=Merriweather:400,400italic,300,300italic,700,700italic,900,900italic' rel='stylesheet' type='text/css' />
+		<!-- js -->
+		<script src="../static/js/jquery.min.js" th:src="js/jquery.min.js"></script>
+		<!-- //js -->
+		<!-- for-mobile-apps -->
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="keywords" content="Flatter Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+		Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+				function hideURLbar(){ window.scrollTo(0,1); } </script>
+		<!-- //for-mobile-apps -->
+		<!-- start-smoth-scrolling -->
+		<script type="text/javascript" src="js/move-top.js"></script>
+		<script type="text/javascript" src="js/easing.js"></script>
+		<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){		
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+				});
+			});
+		</script>
+<!-- start-smoth-scrolling -->
+</head>
+	
+<body>
+<!-- banner -->
+<div class="banner1">
+	<div class="container">
+		<div class="navi">
+			<div th:include="header :: header"></div>
+		</div>
+	</div>
+</div>
+<!-- //banner -->
+<!-- portfolio -->
+	<div id="portfolio" class="portfolio">
+	<!-- Portfolio Starts Here -->
+	<div class="portfolios entertain_box  wow fadeInUp" data-wow-delay="0.4s" id="project">
+		<div class="container">
+			<div class="portfolio-info">
+				<h3>PORTFOLIO</h3>
+				<div class="strip"></div>
+			</div>
+		</div>
+					<ul id="filters" class="clearfix">
+							<li><span class="filter active" data-filter="app card icon web" onclick="changeText('all')">All</span></li>
+							<li><span class="filter" data-filter="app" onclick="changeText('app')">Web</span></li>
+							<li><span class="filter" data-filter="card" onclick="changeText('card')">Mobile</span></li>
+							<li><span class="filter" data-filter="icon" onclick="changeText('icon')">Design</span></li>
+							<li><span class="filter" data-filter="web" onclick="changeText('web')">Typeography</span></li>
+					</ul>
+
+					<div class="container">
+						<p id="commentId" align="center">
+							All we have ever done
+						</p>
+					</div>
+					
+					<script type="text/javascript">
+						function changeText(modeIn) {
+							jQuery(function($) {
+								$.post("portfolioJson",
+									    {
+									        mode: modeIn
+									    },
+									    function(result){
+									    	var fieldNameElement = document.getElementById('commentId');
+											fieldNameElement.textContent = result.result[0];
+									    });
+							});
+						}
+					</script>
+		
+					<div id="portfoliolist">
+						<div class="portfolio app mix_all" data-cat="app" style="display: inline-block; opacity: 1;">
+							<div class="portfolio-wrapper">		
+								<a href="images/s-1.jpg" class="b-link-stripe b-animate-go   swipebox"  title="">
+								<img class="img-responsive" src="images/s-1.jpg" />
+								<div class="b-wrapper">
+								<h2 class="b-animate b-from-left    b-delay03 ">
+									<img class="img-responsive zoom" src="images/e.png" alt=""/>
+								</h2>
+								</div></a>
+							</div>
+						</div>				
+						<div class="portfolio card mix_all" data-cat="card" style="display: inline-block; opacity: 1;">
+							<div class="portfolio-wrapper">		
+								<a href="images/s-2.jpg" class="b-link-stripe b-animate-go   swipebox"  title="">
+								<img class="img-responsive" src="images/s-2.jpg" />
+								<div class="b-wrapper">
+								<h2 class="b-animate b-from-left    b-delay03 ">
+								<img class="img-responsive zoom" src="images/e.png" alt=""/></h2>
+								
+								</div></a>
+							</div>
+						</div>		
+						<div class="portfolio app mix_all" data-cat="app" style="display: inline-block; opacity: 1;">
+							<div class="portfolio-wrapper">		
+								<a href="images/s-3.jpg" class="b-link-stripe b-animate-go   swipebox"  title="">
+								<img class="img-responsive" src="images/s-3.jpg" />
+								<div class="b-wrapper">
+								<h2 class="b-animate b-from-left    b-delay03 ">
+								<img class="img-responsive zoom" src="images/e.png" alt=""/></h2>
+						
+								</div></a>
+							</div>
+						</div>				
+						<div class="portfolio icon mix_all" data-cat="icon" style="display: inline-block; opacity: 1;">
+							<div class="portfolio-wrapper">		
+								<a href="images/s-4.jpg" class="b-link-stripe b-animate-go   swipebox"  title="">
+								<img class="img-responsive" src="images/s-4.jpg" />
+								<div class="b-wrapper">
+								<h2 class="b-animate b-from-left    b-delay03 ">
+								<img class="img-responsive zoom" src="images/e.png" alt=""/>
+								</h2>
+						
+								</div></a>
+							</div>
+						</div>	
+						<div class="portfolio web mix_all" data-cat="web" style="display: inline-block; opacity: 1;">
+							<div class="portfolio-wrapper">		
+								<a href="images/s-5.jpg" class="b-link-stripe b-animate-go   swipebox"  title="">
+								<img class="img-responsive" src="images/s-5.jpg" />
+								<div class="b-wrapper">
+								<h2 class="b-animate b-from-left    b-delay03 ">
+								<img class="img-responsive zoom" src="images/e.png" alt=""/>
+								</h2>
+							
+								</div></a>
+							</div>
+						</div>			
+						<div class="portfolio web mix_all" data-cat="web" style="display: inline-block; opacity: 1;">
+							<div class="portfolio-wrapper">		
+								<a href="images/s-6.jpg" class="b-link-stripe b-animate-go  swipebox"  title="">
+								<img class="img-responsive" src="images/s-6.jpg" />
+								<div class="b-wrapper">
+									<h2 class="b-animate b-from-left    b-delay03 ">
+										<img class="img-responsive zoom" src="images/e.png" alt=""/>
+									</h2>
+								
+								</div>
+								</a>
+							</div>
+						</div>
+						<div class="portfolio app mix_all" data-cat="app" style="display: inline-block; opacity: 1;">
+							<div class="portfolio-wrapper">		
+								<a href="images/s-5.jpg" class="b-link-stripe b-animate-go  swipebox"  title="">
+								<img class="img-responsive" src="images/s-5.jpg" alt=""/>
+								<div class="b-wrapper">
+								<h2 class="b-animate b-from-left    b-delay03 ">
+									<img class="img-responsive zoom" src="images/e.png" alt=""/>
+								</h2>
+							
+								</div></a>
+							</div>
+						</div>
+						<div class="portfolio app mix_all" data-cat="app" style="display: inline-block; opacity: 1;">
+							<div class="portfolio-wrapper">		
+								<a href="images/s-2.jpg" class="b-link-stripe b-animate-go   swipebox"  title="">
+								<img class="img-responsive" src="images/s-2.jpg" />
+								<div class="b-wrapper">
+								<h2 class="b-animate b-from-left    b-delay03 ">
+									<img class="img-responsive zoom" src="images/e.png" alt=""/>
+								</h2>
+							
+								</div></a>
+							</div>
+						</div>
+						<div class="portfolio card mix_all" data-cat="card" style="display: inline-block; opacity: 1;">
+							<div class="portfolio-wrapper">		
+								<a href="images/s-3.jpg" class="b-link-stripe b-animate-go  swipebox"  title="">
+								<img class="img-responsive" src="images/s-3.jpg" alt=""/>
+								<div class="b-wrapper">
+								<h2 class="b-animate b-from-left    b-delay03 ">
+									<img class="img-responsive zoom" src="images/e.png" alt=""/>
+								</h2>
+							
+								</div></a>
+							</div>
+						</div>
+						<div class="portfolio app mix_all" data-cat="app" style="display: inline-block; opacity: 1;">
+							<div class="portfolio-wrapper">		
+								<a href="images/s-4.jpg" class="b-link-stripe b-animate-go   swipebox"  title="">
+								<img class="img-responsive" src="images/s-4.jpg" alt=""/>
+								<div class="b-wrapper">
+								<h2 class="b-animate b-from-left    b-delay03 ">
+									<img class="img-responsive zoom" src="images/e.png" alt=""/>
+								</h2>
+								
+								</div></a>
+							</div>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+		
+	</div>
+			<link rel="stylesheet" href="css/swipebox.css" />
+				<script src="js/jquery.swipebox.min.js"></script> 
+					<script type="text/javascript">
+						jQuery(function($) {
+							$(".swipebox").swipebox();
+						});
+					</script>
+				<!-- Portfolio Ends Here -->
+				<script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
+					<script type="text/javascript">
+					$(function () {
+						var filterList = {
+							init: function () {
+								// MixItUp plugin
+							// http://mixitup.io
+							$('#portfoliolist').mixitup({
+								targetSelector: '.portfolio',
+								filterSelector: '.filter',
+								effects: ['fade'],
+								easing: 'snap',
+								// call the hover effect
+								onMixEnd: filterList.hoverEffect()
+							});	
+						},
+						hoverEffect: function () {
+							// Simple parallax effect
+							$('#portfoliolist .portfolio').hover(
+								function () {
+									$(this).find('.label').stop().animate({bottom: 0}, 200, 'easeOutQuad');
+									$(this).find('img').stop().animate({top: -30}, 500, 'easeOutQuad');				
+								},
+								function () {
+									$(this).find('.label').stop().animate({bottom: -40}, 200, 'easeInQuad');
+									$(this).find('img').stop().animate({top: 0}, 300, 'easeOutQuad');								
+								}		
+							);				
+						}
+					};
+					// Run the show!
+						filterList.init();
+					});	
+					</script>
+	</div>
+<!-- //portfolio -->
+
+<!-- //portfolio -->
+<!-- footer -->
+<div th:include="footer :: footer"></div>
+<!-- //footer -->
+</body>
+</html>
